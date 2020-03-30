@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>QR Code Generator</title>
+    </head>
+
+    <body>
+        <h1 style="text-align: center">QR Code Generator</h1>
+        <br />
+        <div class="form" align="center">
+            <form action="/" method="POST">
+                <input type="text" name="text_content" id="content">
+                <input type="submit" value="Generate">
+            </form>
+
+            {% if text_content is not none %}
+                {{ svg_content|safe }}
+                <br />
+                <h4> {{text_content}} </h4>
+            {% endif %}
+        </div>
+
+    </body>
+</html>
