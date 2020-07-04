@@ -1,0 +1,10 @@
+version: "2"
+services:
+  app:
+    container_name: pyqrcode
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "8080:5000"
+      
