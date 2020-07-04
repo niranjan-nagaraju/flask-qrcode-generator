@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
-import pyqrcode                                                                                                                                             
-from pyqrcode import QRCode 
+import pyqrcode
+from pyqrcode import QRCode
 import io
 
 app = Flask(__name__)
@@ -12,8 +12,8 @@ def index():
     if request.method == 'POST':
         text_content = request.form['text_content']
 
-        # Generate QR code 
-        url = pyqrcode.create(text_content) 
+        # Generate QR code
+        url = pyqrcode.create(text_content)
 
         svg = io.BytesIO()
         url.svg(svg, scale = 8)
